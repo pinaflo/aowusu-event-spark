@@ -97,10 +97,10 @@ export const EventPlanningTool = () => {
                     onChange={(e) => setEventData({...eventData, budget: e.target.value})}
                   >
                     <option value="">Select Budget</option>
-                    <option value="5000-10000">$5,000 - $10,000</option>
-                    <option value="10000-25000">$10,000 - $25,000</option>
-                    <option value="25000-50000">$25,000 - $50,000</option>
-                    <option value="50000+">$50,000+</option>
+                    <option value="5000-10000">₵5,000 - ₵10,000</option>
+                    <option value="10000-25000">₵10,000 - ₵25,000</option>
+                    <option value="25000-50000">₵25,000 - ₵50,000</option>
+                    <option value="50000+">₵50,000+</option>
                   </select>
                 </div>
               </div>
