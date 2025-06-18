@@ -11,7 +11,7 @@ const restaurants = [
     name: "Kozo",
     cuisine: "Japanese",
     rating: 4.8,
-    price: "₵₵₵",
+    price: "$$$$",
     capacity: "2-50 guests",
     image: "🏛️",
     features: ["Private Dining", "Outdoor Seating", "Live Music"],
@@ -21,7 +21,7 @@ const restaurants = [
     name: "Shogun",
     cuisine: "Asian",
     rating: 4.6,
-    price: "₵₵₵",
+    price: "$$$",
     capacity: "2-30 guests",
     image: "🍝",
     features: ["Wine Cellar", "Private Room", "Chef's Table"],
@@ -31,7 +31,7 @@ const restaurants = [
     name: "Santoku",
     cuisine: "Japanese",
     rating: 4.7,
-    price: "₵₵₵",
+    price: "$$$",
     capacity: "2-25 guests",
     image: "🍣",
     features: ["Sushi Bar", "Teppanyaki", "Private Tatami Room"],
@@ -41,7 +41,7 @@ const restaurants = [
     name: "La Chaumiere",
     cuisine: "French",
     rating: 4.9,
-    price: "₵₵₵",
+    price: "$$$$",
     capacity: "2-40 guests",
     image: "🥐",
     features: ["Wine Pairing", "Chef's Menu", "Garden Terrace"],
@@ -104,10 +104,10 @@ export const RestaurantSection = () => {
                 onChange={(e) => setFilters({...filters, price: e.target.value})}
               >
                 <option value="">Price Range</option>
-                <option value="₵">₵ - Budget Friendly</option>
-                <option value="₵₵">₵₵ - Moderate</option>
-                <option value="₵₵₵">₵₵₵ - Upscale</option>
-                <option value="₵₵₵₵">₵₵₵₵ - Fine Dining</option>
+                <option value="$">$ - Budget Friendly</option>
+                <option value="$$">$$ - Moderate</option>
+                <option value="$$$">$$$ - Upscale</option>
+                <option value="$$$$">$$$$ - Fine Dining</option>
               </select>
             </div>
           </CardContent>
