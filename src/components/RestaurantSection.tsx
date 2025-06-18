@@ -104,10 +104,10 @@ export const RestaurantSection = () => {
                 onChange={(e) => setFilters({...filters, price: e.target.value})}
               >
                 <option value="">Price Range</option>
-                <option value="$">$ - Budget Friendly</option>
-                <option value="$$">$$ - Moderate</option>
-                <option value="$$$">$$$ - Upscale</option>
-                <option value="$$$$">$$$$ - Fine Dining</option>
+                <option value="₵">₵ - Budget Friendly</option>
+                <option value="₵₵">₵₵ - Moderate</option>
+                <option value="₵₵₵">₵₵₵ - Upscale</option>
+                <option value="₵₵₵₵">₵₵₵₵ - Fine Dining</option>
               </select>
             </div>
           </CardContent>
