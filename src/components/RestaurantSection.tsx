@@ -8,8 +8,8 @@ import { Star, MapPin, Users, DollarSign, Search } from "lucide-react";
 
 const restaurants = [
   {
-    name: "The Golden Terrace",
-    cuisine: "Fine Dining",
+    name: "Kozo",
+    cuisine: "Japanese",
     rating: 4.8,
     price: "$$$$",
     capacity: "2-50 guests",
@@ -18,17 +18,17 @@ const restaurants = [
     description: "Elegant fine dining with panoramic city views"
   },
   {
-    name: "Bella Vista Italian",
-    cuisine: "Italian",
+    name: "Shogun",
+    cuisine: "Asian",
     rating: 4.6,
     price: "$$$",
     capacity: "2-30 guests",
     image: "🍝",
     features: ["Wine Cellar", "Private Room", "Chef's Table"],
-    description: "Authentic Italian cuisine in a romantic setting"
+    description: "Authentic Asian Fusion cuisine in a romantic setting"
   },
   {
-    name: "Sakura Sushi & Grill",
+    name: "Santoku",
     cuisine: "Japanese",
     rating: 4.7,
     price: "$$$",
@@ -38,7 +38,7 @@ const restaurants = [
     description: "Traditional Japanese dining experience"
   },
   {
-    name: "The Heritage Brasserie",
+    name: "La Chaumiere",
     cuisine: "French",
     rating: 4.9,
     price: "$$$$",
