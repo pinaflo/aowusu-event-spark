@@ -1,40 +1,26 @@
-# Use Node.js 18 Alpine as base image
-FROM node:18-alpine AS base
+# Use Node.js Alpine base image
+FROM node:alpine
 
-# Install dependencies only when needed
-FROM base AS deps
-# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-RUN apk add --no-cache libc6-compat
+# Create and set the working directory inside the container
 WORKDIR /app
 
-# Install dependencies based on the preferred package manager
-COPY package.json package-lock.json* ./
-RUN npm ci --only=production
+# Copy package.json and package-lock.json to the working directory
+COPY package.json package-lock.json /app/
 
-# Rebuild the source code only when needed
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+# Install dependencies
+RUN npm install
 
-# Build the application
+# Copy the entire codebase to the working directory
+COPY . /app/
+
+# Build the application for production
 RUN npm run build
 
-# Production image, copy all the files and run the app
-FROM nginx:alpine AS runner
-WORKDIR /usr/share/nginx/html
+# Expose the correct port
+EXPOSE 8080
 
-# Remove default nginx static assets
-RUN rm -rf ./*
+# For development, use:
+# CMD ["npm", "run", "dev"]
 
-# Copy static assets from builder stage
-COPY --from=builder /app/dist .
-
-# Copy nginx configuration
-COPY nginx.conf /etc/nginx/nginx.conf
-
-# Expose port 80
-EXPOSE 80
-
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# For production, use:
+CMD ["npm", "run", "preview"]
