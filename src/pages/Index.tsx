@@ -1,4 +1,4 @@
-
+import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { EventTypes } from "@/components/EventTypes";
@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { Newsletter } from "@/components/Newsletter";
 import { Footer } from "@/components/Footer";
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

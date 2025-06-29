@@ -1,8 +1,16 @@
-
+import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
-const testimonials = [
+interface Testimonial {
+  name: string;
+  event: string;
+  rating: number;
+  text: string;
+  image: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     name: "Sarah Johnson",
     event: "Wedding",
@@ -33,12 +41,12 @@ const testimonials = [
   }
 ];
 
-export const Testimonials = () => {
+export const Testimonials: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50" aria-labelledby="testimonials-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 id="testimonials-heading" className="text-4xl font-bold text-gray-900 mb-4">
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -47,13 +55,13 @@ export const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={`testimonial-${index}`} className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-4" role="img" aria-label={`${testimonial.rating} out of 5 stars`}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={`star-${index}-${i}`} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
                 
@@ -62,7 +70,9 @@ export const Testimonials = () => {
                 </blockquote>
                 
                 <div className="flex items-center">
-                  <div className="text-2xl mr-3">{testimonial.image}</div>
+                  <div className="text-2xl mr-3" role="img" aria-label={`${testimonial.event} icon`}>
+                    {testimonial.image}
+                  </div>
                   <div>
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>
                     <div className="text-sm text-gray-600">{testimonial.event}</div>
@@ -74,7 +84,7 @@ export const Testimonials = () => {
         </div>
 
         <div className="text-center mt-12">
-          <div className="inline-flex items-center space-x-2 text-gray-600">
+          <div className="inline-flex items-center space-x-2 text-gray-600" role="img" aria-label="Overall rating: 4.9 out of 5 stars from 200+ reviews">
             <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
             <span className="text-lg font-semibold">4.9/5</span>
             <span>average rating from 200+ reviews</span>

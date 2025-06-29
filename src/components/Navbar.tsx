@@ -1,9 +1,8 @@
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
