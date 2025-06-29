@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aowusu-event-spark
+  labels:
+    app: aowusu-event-spark
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aowusu-event-spark
+  template:
+    metadata:
+      labels:
+        app: aowusu-event-spark
+    spec:
+      containers:
+      - name: aowusu-event-spark
+        image: your-registry/aowusu-event-spark:latest
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aowusu-event-spark-service
+spec:
+  selector:
+    app: aowusu-event-spark
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
