@@ -39,10 +39,10 @@ const eventTypes: EventType[] = [
     features: ["Donor management", "Auction coordination", "Media coverage"]
   },
   {
-    title: "Conferences",
-    description: "Knowledge-sharing events that inspire",
+    title: "Education and learning",
+    description: "Build values that shape personal growth and societal progress.",
     image: "🎤",
-    features: ["Speaker coordination", "Technical setup", "Registration management"]
+    features: ["Seminars", "Workshops", "Conferences", "Learning Opportunities"]
   }
 ];
 
