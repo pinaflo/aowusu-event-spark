@@ -7,14 +7,14 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-1">
-            <div className="text-2xl font-bold mb-4 font-cursive">ABONTEN</div>
+            <div className="text-2xl font-bold mb-4">OPERA</div>
             <p className="text-gray-400 mb-6 max-w-md">
               Your trusted partner for unforgettable events and exceptional dining experiences. 
               Making every celebration perfect, one detail at a time.
             </p>
             <div className="flex space-x-4" role="group" aria-label="Social media links">
               <a 
-                href="https://facebook.com/abonten" 
+                href="https://facebook.com/opera" 
                 className="text-gray-400 hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -23,7 +23,7 @@ export const Footer = () => {
                 <Facebook className="h-6 w-6" />
               </a>
               <a 
-                href="https://instagram.com/abonten" 
+                href="https://instagram.com/opera" 
                 className="text-gray-400 hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -32,7 +32,7 @@ export const Footer = () => {
                 <Instagram className="h-6 w-6" />
               </a>
               <a 
-                href="mailto:info@abonten.com" 
+                href="mailto:info@opera.com" 
                 className="text-gray-400 hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 transition-colors"
                 aria-label="Send us an email"
               >
@@ -137,7 +137,7 @@ export const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} ABONTEN. All rights reserved.
+              © {new Date().getFullYear()} OPERA. All rights reserved.
             </p>
             <nav className="flex space-x-6 mt-4 md:mt-0" aria-label="Legal links">
               <a 
