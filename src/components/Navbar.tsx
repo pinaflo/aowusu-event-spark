@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,10 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary">OPERA</div>
+            <div className="flex items-center space-x-2 text-2xl font-bold text-primary">
+              <Sparkles className="h-8 w-8" />
+              <span>OPERA</span>
+            </div>
           </div>
           
           <div className="hidden md:block">
