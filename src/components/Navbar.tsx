@@ -12,7 +12,7 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img src={abontenLogo} alt="abonten" className="h-8 w-8 mr-2" />
-            <div className="text-2xl font-bold text-primary">abonten</div>
+            <div className="text-2xl font-bold text-primary font-cursive">ABONTEN</div>
           </div>
           
           <div className="hidden md:block">

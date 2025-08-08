@@ -15,7 +15,7 @@ const testimonials: Testimonial[] = [
     name: "Sarah Johnson",
     event: "Wedding",
     rating: 5,
-    text: "abonten made our dream wedding come true! Every detail was perfect, from the venue coordination to the last dance. They truly understood our vision.",
+    text: "ABONTEN made our dream wedding come true! Every detail was perfect, from the venue coordination to the last dance. They truly understood our vision.",
     image: "👰"
   },
   {
@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
     name: "Elena Rodriguez",
     event: "Birthday Celebration",
     rating: 5,
-    text: "My 40th birthday party was absolutely magical! abonten took care of everything while I enjoyed celebrating with my loved ones. Highly recommend!",
+    text: "My 40th birthday party was absolutely magical! ABONTEN took care of everything while I enjoyed celebrating with my loved ones. Highly recommend!",
     image: "🎉"
   },
   {
@@ -51,7 +51,7 @@ export const Testimonials: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what our satisfied clients 
-            have to say about their abonten experience.
+            have to say about their ABONTEN experience.
           </p>
         </div>
 
