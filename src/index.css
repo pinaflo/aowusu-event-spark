@@ -6,57 +6,57 @@
 
 @layer base {
   :root {
-    /* Dark crypto-inspired theme - Main colors */
-    --background: 0 0% 2%;
-    --foreground: 0 0% 95%;
+    /* Light modern theme - Main colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
 
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
 
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
 
-    /* Green accent color inspired by crypto platforms */
-    --primary: 142 76% 52%;
-    --primary-foreground: 0 0% 2%;
+    /* Blue accent color for modern look */
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 0 0% 8%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
 
-    --muted: 0 0% 8%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 0 0% 8%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 10%;
-    --input: 0 0% 8%;
-    --ring: 142 76% 52%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.75rem;
 
-    /* Grid pattern background */
-    --grid-pattern: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+    /* Subtle pattern background */
+    --grid-pattern: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.02) 1px, transparent 0);
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.8));
-    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--card) / 0.9));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--card) / 0.95));
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.2);
-    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.1);
 
-    --sidebar-background: 0 0% 4%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 142 76% 52%;
-    --sidebar-primary-foreground: 0 0% 2%;
-    --sidebar-accent: 0 0% 8%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 10%;
-    --sidebar-ring: 142 76% 52%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 3.9%;
+    --sidebar-primary: 221.2 83.2% 53.3%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222.2 84% 4.9%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 221.2 83.2% 53.3%;
   }
 
   * {
@@ -69,7 +69,7 @@
     background-size: 50px 50px;
   }
   
-  /* Enhance card styles with crypto-inspired effects */
+  /* Enhance card styles with modern effects */
   .card-glow {
     background: var(--gradient-card);
     box-shadow: var(--shadow-card);
@@ -82,12 +82,12 @@
     transition: all 0.3s ease;
   }
   
-  /* Green glow for primary buttons */
+  /* Blue glow for primary buttons */
   .btn-primary-glow {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
   }
   
   .btn-primary-glow:hover {
-    box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.3);
   }
 }

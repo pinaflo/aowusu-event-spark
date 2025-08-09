@@ -12,7 +12,7 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center">
             <div className="flex items-center space-x-2 text-2xl font-bold text-primary">
               <Sparkles className="h-8 w-8" />
-              <span>OPERA</span>
+              <span>OUTSIDE</span>
             </div>
           </div>
           

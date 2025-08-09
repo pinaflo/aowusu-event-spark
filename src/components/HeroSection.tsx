@@ -10,7 +10,7 @@ export const HeroSection = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Plan. Book. <span className="text-primary">Celebrate.</span>
             <br />
-            With OPERA.
+            With OUTSIDE.
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             From intimate gatherings to grand celebrations, we handle every detail. 
